@@ -6,9 +6,9 @@ if __name__ == "__main__":
     if elements == 0:
         print("{} arguments.".format(elements))
     elif elements == 1:
-        print("{} argument".format(elements))
+        print("{} argument:".format(elements))
         print("{}: {}".format(elements, arguments[0]))
     else:
-        print("{} arguments".format(elements))
+        print("{} arguments:".format(elements))
         for i in range(0, elements):
             print("{}: {}".format(i, arguments[i]))
