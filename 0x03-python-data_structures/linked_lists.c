@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 #include <stdlib.h>
 #include "lists.h"
@@ -21,6 +20,7 @@ size_t print_listint(const listint_t *h)
 		current = current->next;
 		n++;
 	}
+
 	return (n);
 }
 
@@ -52,6 +52,7 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 			current = current->next;
 		current->next = new;
 	}
+
 	return (new);
 }
 
@@ -71,3 +72,4 @@ void free_listint(listint_t *head)
 		free(current);
 	}
 }
+
