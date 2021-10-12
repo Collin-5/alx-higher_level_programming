@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+
+"""
+Script that updates a list with json representation
+"""
+
 import random
 import sys
 from time import sleep
