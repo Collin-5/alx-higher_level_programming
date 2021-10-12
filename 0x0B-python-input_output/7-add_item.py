@@ -1,15 +1,20 @@
 #!/usr/bin/python3
-"""Module for appends elements in a json file."""
-import json
-import sys
-save_to_json_file = __import__('7-save_to_json_file').save_to_json_file
-load_from_json_file = __import__('8-load_from_json_file').load_from_json_file
+"""
+Script that updates a list with json representation
+"""
+
+from sys import argv
+save_json = __import__('5-save_to_json_file').save_to_json_file
+load_json = __import__('6-load_from_json_file').load_from_json_file
+
+filename = "add_item.json"
 
 try:
-    container = load_from_json_file('add_item.json')
+    list_arg = load_json(filename)
 except:
-    container = []
+    list_arg = []
 
-for i in range(1, len(sys.argv)):
-    container.append(sys.argv[i])
-save_to_json_file(container, 'add_item.json')
+with open(filename, 'w', encoding="utf-8") as f:
+    for arg in argv[1:]:
+        list_arg.append(arg)
+        save_json(list_arg, filename)
