@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-return all table that start with N
+return all table thtat looks like user input
 parameters given to script: username, password, database
 """
 
@@ -18,7 +18,7 @@ if __name__ == "__main__":
 
     # create cursor to exec queries using SQL
     c = db.cursor()
-    c.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC")
+    c.execute("""SELECT * FROM states WHERE name LIKE {:s} ORDER BY id ASC""".format(argv[4]))
     for row in c.fetchall():
         print(row)
     c.close()
