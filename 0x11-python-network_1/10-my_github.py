@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-given username and pw as param, get your id from Github api
+given username and pw s param, get your id from Github api
 usage: ./10-my_github.py [github_username] [github_pw]
 """
 from sys import argv
