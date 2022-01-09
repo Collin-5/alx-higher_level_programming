@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-given URL as parameter, fetch URL and display value from reponse header
+given URLas parameter, fetch URL and display value from reponse header
 usage: ./5-hbtn_header https://intranet.hbtn.io
 """
 from sys import argv
