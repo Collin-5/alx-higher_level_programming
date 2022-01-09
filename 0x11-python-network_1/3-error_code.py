@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
 given URL & email as params, display response body utf-8, print error codes
-usage: ./3-error_code.py http://0.0.0.0:5000/status_401
+usage: ./3-error_code.py http://0.0.0.0:5000/status_
 """
 from sys import argv
 import urllib.request
