@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-given letter pattern as param to be search val of request; print Star War names
+given letter patternas param to be search val of request; print Star War names
 usage: ./9-starwars.py [letter pattern to match names]
 """
 from sys import argv
