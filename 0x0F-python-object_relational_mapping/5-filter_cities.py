@@ -17,16 +17,16 @@ if __name__ == "__main__":
                          db=argv[3])
 
     # create cursor to exec queries using SQL; join two tables for all info
-    cursor = db.cursor()
+    c = db.cursor()
     sql_cmd = """SELECT cities.name
                  FROM states
                  INNER JOIN cities ON states.id = cities.state_id
                  WHERE states.name LIKE %s
                  ORDER BY cities.id ASC"""
-    cursor.execute(sql_cmd, (argv[4], ))
+    c.execute(sql_cmd, (argv[4], ))
 
     # format the printing of cities of same state separated by commas
-    print(', '.join(["{:s}".format(row[0]) for row in cursor.fetchall()]))
+    print(', '.join(["{:s}".format(row[0]) for row in c.fetchall()]))
 
-    cursor.close()
+    c.close()
     db.close()
