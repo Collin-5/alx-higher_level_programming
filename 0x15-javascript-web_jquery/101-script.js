@@ -1,14 +1,17 @@
-$(function () {
-  $('#add_item').click(function () {
-    $('ul.my_list').append('<li>Item</li>');
+document.addEventListener('DOMContentLoaded', function () {
+  const list = $('UL.my_list');
+  const item = '<li>Item</li>';
+  $('div#add_item').click(function () {
+    list.append(item);
   });
-  $('#remove_item').click(function () {
-    let items = $('ul.my_list li');
-    if (items.length > 0) {
-      items[items.length - 1].remove();
-    }
+
+  $('div#remove_item').click(function () {
+    $('ul.my_list li:last-child').remove();
   });
-  $('#clear_list').click(function () {
-    $('ul.my_list').empty();
+
+  $('div#clear_list').click(function () {
+    $('ul.my_list li').each(function () {
+      $(this).remove();
+    });
   });
 });

@@ -1,5 +1,3 @@
-$(function () {
-  $('#add_item').click(function () {
-    $('ul.my_list').append($('<li></li>').text('Item'));
-  });
+$('div#add_item').click(function () {
+  $('ul.my_list').append('<li>Item</li>');
 });

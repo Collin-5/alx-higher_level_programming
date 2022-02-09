@@ -7,4 +7,15 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   });
+  $('INPUT#language_code').focus(function () {
+    $('INPUT#language_code').keydown(function (e) {
+      if (e.keyCode === 13) {
+        $.get(url + $('INPUT#language_code').val(), function (data, status) {
+          if (status === 'success') {
+            $('DIV#hello').text(data.hello);
+          }
+        });
+      }
+    });
+  });
 });
